@@ -1,12 +1,4 @@
-$arkaplan : red;
-ul{
-    background-color: $arkaplan;    
-}
-
-ol{
-    background-color: blue;
-}
-
-p{
-    background-color: rgb(42, 165, 58);
-}
+@import "variable";
+@import "normalize";
+@import "formalize";
+@import "global";
