@@ -345,11 +345,19 @@ table {
 td {
   padding: 0; }
 
-ul {
-  background-color: red; }
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
 
-ol {
-  background-color: blue; }
-
-p {
-  background-color: #2aa53a; }
+.Header {
+  background-color: #003580;
+  border-bottom: 1px solid #ddd; }
+  .Header .container {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .Header-menu {
+    margin-left: auto;
+    display: flex; }
