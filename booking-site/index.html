@@ -4,10 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <title>icon-menu</title>
+        <path d="M3 6h18v2.016h-18v-2.016zM3 12.984v-1.969h18v1.969h-18zM3 18v-2.016h18v2.016h-18z"></path>
+      </symbol>
+    </defs>
+  </svg>
 
   <header class="Header">
     <div class="container">
@@ -20,7 +31,12 @@
           <a href="">Register</a>
           <a href="">Sing In</a>
         </div>
-        <a href="">List your property</a>
+        <button class="Header-menu-switch" type="button">
+          <svg class="icon icon-menu">
+            <use xlink:href="#icon-menu"></use>
+          </svg>
+        </button>
+        <a class="button" href="">List your property</a>
         <div class="Header-menu-helper">
           <select>
             <option value="en">En</option>
