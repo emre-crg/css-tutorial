@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Title</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
@@ -26,17 +27,18 @@
         <img src="img/site-logo.png" alt="">
       </a>
 
+      <button class="Header-switch button button-icon" type="button">
+        <svg class="icon icon-menu">
+          <use xlink:href="#icon-menu"></use>
+        </svg>
+      </button>
+
       <div class="Header-menu">
         <div class="Header-menu-user">
           <a href="">Register</a>
           <a href="">Sing In</a>
         </div>
-        <button class="Header-menu-switch" type="button">
-          <svg class="icon icon-menu">
-            <use xlink:href="#icon-menu"></use>
-          </svg>
-        </button>
-        <a class="button" href="">List your property</a>
+        <a class="Header-menu-property button button-blue" href="">List your property</a>
         <div class="Header-menu-helper">
           <select>
             <option value="en">En</option>
@@ -50,7 +52,8 @@
 
 
   </header>
-
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/main.js"></script>
   <body>
 
 </html>
