@@ -387,12 +387,13 @@ a {
     background-color: #01ACEE; }
 
 .Header {
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd;
+  height: 68px; }
   .Header .container {
     position: relative;
     display: flex;
     align-items: center;
-    height: 68px; }
+    height: 100%; }
   .Header-logo img {
     width: 144px; }
   .Header-switch {
@@ -480,3 +481,19 @@ a {
           border-left-width: 0;
           border-bottom-right-radius: 3px;
           border-top-right-radius: 3px; }
+
+.Navigation {
+  height: 50px;
+  background-color: #F1F6FF; }
+  .Navigation .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll; }
+    @media (min-width: 768px) {
+      .Navigation .container {
+        overflow-x: visible; } }
+  .Navigation-item {
+    margin-right: 20px;
+    font-size: 0.9em;
+    font-weight: bold; }

@@ -1,11 +1,12 @@
 .Header{
     border-bottom: 1px solid #ddd;
+    height: 68px;
 
     .container{
         position: relative;
         display: flex;
         align-items: center;
-        height: 68px;
+        height: 100%;
     }
 
     &-logo{
