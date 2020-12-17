@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const pug = require('gulp-pug');
 
 sass.compiler = require('node-sass');
 
@@ -40,13 +41,27 @@ gulp.task(
   gulp.series('nodemon', () => {
     browserSync.init(null, {
       proxy: 'http://localhost:3000',
-      files: ['./**/*.html','./sass/**/*.scss','./*.js'],
+      files: ['./sass/**/*.scss','./*.js', './views/**/*.pug'],
       port: 5000
     });
   })
 );
 
+// Pug Compilation
+gulp.task('pug', () => {
+  return gulp
+  .src('./views/*.pug')
+  .pipe(pug())
+  .pipe(gulp.dest('./'))
+})
+
+// Pug watching, depending on "pug" task
+gulp.task('pug:watch', function() {
+  gulp.watch('./views/**/*.pug', gulp.series('pug'))
+})
+
 // Dev Task: 
 // Parallel execution of browser-sync/nodemon
-// and sass watching
-gulp.task('default', gulp.parallel('browser-sync', 'sass:watch'));
+// Sass watching
+// and Pug watching
+gulp.task('default', gulp.parallel('browser-sync', 'sass:watch', 'pug:watch'));
