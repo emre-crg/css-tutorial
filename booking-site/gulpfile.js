@@ -41,7 +41,7 @@ gulp.task(
   gulp.series('nodemon', () => {
     browserSync.init(null, {
       proxy: 'http://localhost:3000',
-      files: ['./sass/**/*.scss','./*.js', './views/**/*.pug'],
+      files: ['./sass/**/*.scss', './*.js', './js/**/*.js', './views/**/*.pug'],
       port: 5000
     });
   })
