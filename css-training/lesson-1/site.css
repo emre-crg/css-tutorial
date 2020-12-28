@@ -1,0 +1,48 @@
+/* (*) Selector'ü bütün elemanları kapsar*/
+* {
+  color: blueviolet;
+}
+
+/* Type selectorler html taglerini seçerler.*/
+h1 {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+li {
+  font-size: 20px;
+}
+
+/* Class selectorler (.) ile seçilir*/
+.kucuk {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.buyuk {
+
+}
+
+/* 
+* ID selectorler (#) ile seçilir. 
+* Id ler Unique olmalıdır. Yani html sayfasında sadece bir eleman bir ID ile seçilmelidir.
+*/
+#crg-2 {
+  font-style: italic;
+}
+
+
+/* 
+* Attribute seçicileri
+* class, ID gibi özelliklerin alınıp alınmadığına göre seçer.
+*/
+[class] {
+	color: rgb(211, 12, 211);
+}
+
+[id] {
+	color: blue;
+}
